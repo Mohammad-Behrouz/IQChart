@@ -1,0 +1,142 @@
+.suggestions-div {
+    width: 50%;
+    height: 60%;
+    background-color: #000f51;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 10px;
+}
+
+#suggestion-container {
+    height: 85vh;
+}
+
+#explain-suggestions {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    text-align: justify;
+    width: 50%;
+    height: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#explain-suggestions p {
+    font-size: 13px;
+}
+
+#header-of-text-area {
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    margin: 10px;
+    align-items: center;
+
+}
+
+#header-of-text-area h4 {
+    color: white;
+
+}
+
+#header-of-text-area button {
+    background-color: #019349;
+    color: white;
+    padding: 6px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#textarea-container {
+    width: 50%;
+    padding: 10px;
+    height: 86%;
+}
+
+#textarea-container textarea {
+    width: 100%;
+    resize: none;
+    height: 77%;
+    background-color: #4a4971;
+    color: white;
+    direction: rtl;
+    border-radius: 10px;
+    outline: none;
+}
+
+.container-of-market-show {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-of-market-show-div {
+    width: 90%;
+
+}
+
+.markets-div {
+    width: 100%;
+    height: 150px;
+    background-color: #000f51;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 0 5px #000f51;
+}
+
+.markets-div img {
+    width: 40%;
+}
+
+.markets-div strong {
+    color: #d1d4dc;
+}
+
+.markets-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container-of-market-show-div {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .suggestions-div {
+        width: 90%;
+        padding: 20px 0 50px 0;
+        height: auto;
+        flex-direction: column;
+    }
+
+    #suggestion-container {
+        align-items: start;
+    }
+
+    #explain-suggestions {
+        width: 80%;
+    }
+
+    #textarea-container {
+        width: 90%;
+    }
+
+    #header-of-text-area {
+        margin: 10px 0;
+    }
+    #textarea-container textarea{
+        height: 110px;
+    }
+}

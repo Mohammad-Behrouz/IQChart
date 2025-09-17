@@ -1,0 +1,690 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    /* direction: rtl; اسکرول میره سمت چپ */
+}
+
+
+
+/* سفارشی‌سازی اسکرول‌بار برای Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #000f51;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 6px;
+    border: 2px solid #222;
+}
+
+/* سفارشی‌سازی برای Firefox */
+body {
+    scrollbar-width: thin;
+    /* باریک‌تر کردن اسکرول */
+    scrollbar-color: #000f51 white;
+    /* thumb و track */
+}
+
+
+*,
+::after,
+::before {
+    box-sizing: inherit !important;
+}
+
+.admin-panel-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px gray;
+    padding-top: 15%;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    background-color: #fff;
+    align-items: center;
+}
+
+/* .nav-container {
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+* {
+    font-family: "IranSans";
+}
+
+.admin-panel-nav i {
+    font-size: 24px;
+}
+
+.open-nav {
+    width: 220px;
+    overflow: hidden;
+}
+
+.admin-panel-nav a span {
+    opacity: 0;
+    transition: background-color 1s ease-out;
+    transition: opacity 0.3s ease-out;
+    position: fixed;
+    right: 3.5%;
+    font-family: "iranSans";
+}
+
+.open-nav a span {
+    opacity: 1;
+
+}
+
+.layoutListLi {
+    width: 100%;
+    transition: all 0.2s linear;
+    padding: 15px 10px 15px 0;
+    border-radius: 10px;
+    color: #000f51;
+
+}
+
+.layoutListLi:hover {
+    background-color: #000f51;
+    color: white;
+}
+
+.admin-panel-nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    right: 13px;
+}
+
+
+.hamburger {
+    width: 24px;
+    height: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: fixed;
+    right: 9px;
+    top: 13%;
+    outline: none;
+}
+
+.hamburger span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #000f51;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+    height: 4px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* وقتی کلاس open رو داره، خط 1 و 3 ضربدر می‌شن، خط 2 محو می‌شه */
+.hamburger.open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-45deg);
+}
+
+.layoutListLi a {
+    display: flex;
+    direction: rtl;
+}
+
+#header-of-admin-users {
+    width: 93%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-direction: row-reverse;
+}
+
+.box-admin {
+    width: 300px;
+    border-radius: 10px;
+    height: 130px;
+}
+
+#number-of-users {
+    background: linear-gradient(45deg, #000f51, #6c09e5);
+}
+
+#add-user-box {
+    background: linear-gradient(45deg, #185618, #00ff81);
+}
+
+#users-block-list {
+    background: linear-gradient(45deg, #680606, #ff0000);
+}
+
+#number-of-users {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: white;
+    justify-content: space-evenly;
+}
+
+#number-of-users img {
+    width: 122px;
+}
+
+#number-of-users div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#admin-user-section-1 {
+    width: 93%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 10px;
+}
+
+#admin-user-section-1-div {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#admin-user-section-1-div div {
+    width: 90%;
+    height: 53px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(1, 1, 99);
+    background-color: #000f51;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: row-reverse;
+    color: white;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+}
+
+.users-list li {
+    text-align: center;
+}
+
+.table-show-users {
+    width: 90%;
+    direction: rtl;
+    gap: 20px;
+}
+
+.table-show-users tr {
+    margin: 10px 0;
+}
+
+.table-show-users td {
+    text-align: center;
+}
+
+.users-list li:nth-child(1),
+.table-show-users td:nth-child(1) {
+    width: 10%;
+}
+
+.users-list li:nth-child(2),
+.table-show-users td:nth-child(2) {
+    width: 20%;
+}
+
+.users-list li:nth-child(3),
+.table-show-users td:nth-child(3) {
+    width: 20%;
+}
+
+.users-list li:nth-child(4),
+.table-show-users td:nth-child(4) {
+    width: 30%;
+}
+
+.users-list li:nth-child(5),
+.table-show-users td:nth-child(5) {
+    width: 20%;
+
+}
+
+.table-show-users button {
+    background-color: #fff;
+    border: 1px solid #000f51;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px 7px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: #000f51;
+}
+
+.table-show-users button:hover {
+    background-color: #000f51;
+    color: white;
+}
+
+.discount-container {
+    display: flex;
+    height: 90%;
+}
+
+#didcount-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+
+}
+
+#didcount-form-container form {
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#didcount-form-container form h3 {
+    margin: 0 0 30px 0;
+}
+
+#didcount-form-container form button {
+    background-color: rgb(3 114 3);
+    border: none;
+    width: 80%;
+    padding: 10px 5px;
+    color: white;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.discount-code-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    height: inherit;
+    grid-row-gap: 20px;
+}
+
+.discount-code-display-div {
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.discount-code-display-div div {
+    display: flex;
+    flex-direction: column;
+    ;
+}
+
+.discount-code-display-div div span {
+    font-size: 15px;
+}
+
+.discount-code-display-div button {
+
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.discount-code-display-div button:hover {
+    color: red;
+    background-color: white;
+}
+
+.header-of-products {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 90px 0 20px;
+    direction: rtl;
+}
+
+.header-of-product h2 {
+    text-align: right;
+    /* margin: 16px 89px 0px 0px; */
+    color: rgb(0, 15, 81);
+}
+
+.modal-product h4 {
+    text-align: center;
+}
+
+.upload-img {
+    width: 100%;
+}
+
+.upload-img input {
+    width: 93%;
+    background: #615f9b;
+    color: white;
+}
+
+.upload-img i {
+    color: #615f9b;
+    margin: 0 10px 0 5px;
+}
+
+#product-add-buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#product-add-buttons button {
+    width: 42%;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.displaying-products {
+    overflow: scroll !important;
+    padding: 0 10% 0 5%;
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+#displaying-products-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin-top: 10px;
+
+}
+
+.admin-show-product {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin-show-product img {
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+#displaying-article-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    margin-top: 10px;
+    width: 90%;
+
+}
+
+
+.admin-show-article {
+    width: 100%;
+    ;
+    background-color: #fff;
+    box-shadow: 0 0 10px gray;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.admin-show-article p {
+    margin: 4px 0;
+    font-size: 12px;
+}
+
+.admin-show-article img {
+    width: 100%;
+    height: 60%;
+    margin-bottom: 10px;
+}
+
+.admin-show-article div {
+    display: flex;
+    gap: 5px;
+    width: 90%;
+}
+
+.count-p-div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.count-p-div span:nth-child(1) {
+    font-size: 18px;
+}
+
+.count-p-div span:nth-child(2) {
+    font-size: 12px;
+}
+
+
+.count-p-btn {
+    display: flex;
+}
+
+.count-p-btn button {
+    color: white;
+    padding: 1px 10px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discount-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discount-form input {
+    width: 75%;
+}
+
+.discount-form p {
+    margin: 10px 0;
+}
+
+
+.discount-form button {
+    width: 50%;
+    margin: 0 20px;
+}
+
+.edit-and-discount-btns {
+    display: flex;
+    margin: 7px 0;
+    justify-content: space-between;
+}
+
+.edit-and-discount-btns button {
+    width: 39%;
+}
+
+#delete-button-p {
+    width: 80%;
+    padding: 5px 0px;
+    margin: 3px 0;
+}
+
+.delete-modal {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#add-block-div {
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+
+#header-of-articles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    margin: 10px 0;
+    color: white;
+}
+
+#header-of-adding-article {
+
+    margin: 30px 7% 10px 7%;
+    text-align: right;
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header-of-adding-article h3 {
+    width: 50%;
+}
+
+#info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 300vh; */
+    overflow-y: auto;
+    margin-bottom: 50px;
+}
+
+.article-info {
+    display: grid;
+    direction: rtl;
+    row-gap: 10px;
+    width: 90%;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0;
+}
+
+.article-info div {
+    width: 80%;
+}
+
+.tox-tinymce {
+    width: 85%;
+    font-family: "IranSans";
+}
+
+.upload-for-article {
+    display: flex;
+    direction: rtl;
+    width: 100%;
+    align-items: center;
+}
+
+#label-of-article {
+    font-size: 16px;
+    width: 20%;
+    margin-bottom: 0;
+}
+
+#uplpad-container {
+    width: 85%;
+
+}
+
+#uplpad-container textarea {
+    background-color: #bed1f3a9;
+    color: #000f51;
+}
+
+#uplpad-container input {
+    background-color: #bed1f3a9;
+    color: #000f51;
+}

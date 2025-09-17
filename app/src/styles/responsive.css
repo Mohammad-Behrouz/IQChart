@@ -1,0 +1,180 @@
+/* 📱 موبایل: عرض زیر ۶۰۰px */
+@media (max-width: 599px) {
+    .header {
+        display: flex;
+        height: 75px;
+        justify-content: center;
+    }
+
+    .header ul {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    #logo-and-ul-nav {
+        margin: 0;
+        width: auto
+    }
+
+    #account-and-search-nav {
+        display: none !important;
+    }
+
+    .admin-panel-nav {
+        flex-direction: row;
+        background-color: #000f51;
+        right: 5%;
+        top: auto;
+        bottom: 3%;
+        width: 90%;
+        height: 80px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .admin-panel-nav ul {
+        display: flex;
+        flex-direction: row;
+        direction: rtl;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        gap: 0px;
+    }
+
+    .admin-panel-nav ul li {
+        color: white;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .admin-panel-nav ul li i {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .admin-panel-nav ul li i a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin-panel-nav ul li span {
+        color: white;
+        opacity: 1;
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        bottom: -10px;
+        right: 20%;
+    }
+
+    #signUp-SubDiv {
+        display: none;
+    }
+
+    #login-SubDiv {
+        width: 100%;
+    }
+
+    #login-div {
+        width: 90%;
+    }
+
+    .logo {
+
+        width: 130px;
+    }
+
+    #header-of-admin-users {
+        gap: 5px;
+        height: inherit;
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 12px;
+
+    }
+
+    #margin-div-for-nav {
+        height: 90px;
+    }
+
+    #add-block-div {
+        flex-direction: row;
+        margin-top: 5px;
+        gap: 2%;
+        width: 100%;
+    }
+
+    #add-block-div div {
+        width: 49%;
+    }
+
+    #margin-div-for-nav {
+        width: 100%;
+        height: 90px;
+    }
+
+    #number-of-users {
+        width: 100% !important;
+    }
+
+    #title-of-Header {
+        display: none;
+    }
+
+
+    #admin-user-section-1 {
+        width: 94%;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .trash-and-edit-for-admin-users {
+        width: 25% !important;
+    }
+
+    .table-show-users button {
+        margin: 2px;
+    }
+
+    #admin-user-section-1-div div {
+        width: 97%;
+    }
+}
+
+/* 📲 تبلت کوچک: ۶۰۰ تا ۷۶۷px */
+@media (min-width: 600px) and (max-width: 767px) {
+    .compass-icon {
+        font-size: 50px;
+        color: orange;
+    }
+}
+
+/* 💻 تبلت بزرگ تا لپ‌تاپ: ۷۶۸ تا ۹۹۹px */
+@media (min-width: 768px) and (max-width: 999px) {
+    .compass-icon {
+        font-size: 70px;
+        color: green;
+    }
+}
+
+/* 🖥 دسکتاپ: ۱۰۰۰px به بالا */
+@media (min-width: 1000px) {
+    .compass-icon {
+        font-size: 100px;
+        color: blue;
+    }
+}

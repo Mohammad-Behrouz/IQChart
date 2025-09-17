@@ -1,0 +1,203 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.header {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000f51;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 3;
+  direction: rtl;
+}
+
+#logo-and-ul-nav {
+  display: flex;
+  direction: rtl;
+  width: 60%;
+  height: 100%;
+  justify-content: start;
+  align-items: center;
+  margin-right: 30px;
+}
+
+#account-and-search-nav {
+  width: auto;
+  margin-left: 30px;
+  display: flex;
+  color: white;
+  font-size: 14px;
+  align-items: center;
+  height: 90%;
+  gap: 20px;
+}
+
+#account-and-search-nav a {
+  color: white;
+  background: none;
+  height: 100%;
+  transition: all 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#account-and-search-nav butto:hover {
+  background-color: rgb(15, 15, 205);
+}
+
+
+.logo {
+  width: 130px;
+
+}
+
+.header ul {
+  display: flex;
+  margin: 0;
+  padding: 15px;
+  /* padding-right: 63px; */
+  direction: rtl;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav-li {
+  padding: 16px;
+  color: white;
+  font-size: 14px;
+  font-family: "IranSans";
+
+}
+
+.commonInput {
+  background-color: #bed1f3a9;
+  direction: rtl;
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px 5px;
+  color: #000f51;
+  justify-content: center;
+  border-radius: 10px;
+
+
+}
+
+.commonInput input {
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  outline: none;
+  width: 80%;
+}
+
+.commonInput input::placeholder {
+  color: #000f5175;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* styles/modal.css */
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+.common-input{
+  /* width: 350px; */
+  height: 20px;
+  border-radius: 10px;
+  background-color: #bed1f3a9;
+  color: #000f51;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+}
+.common-input input{
+  background-color: transparent;
+  direction: rtl;
+  border: none;
+  outline: none;
+  width: 80%;
+}
+.common-input i{
+  font-size: 20px;
+  margin: 0 10px;
+  color: #000f51;
+  align-self: center;
+}
