@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/user.css"
+import { Link } from 'react-router-dom'
 
 
 const UserMarkets = () => {
@@ -7,27 +8,33 @@ const UserMarkets = () => {
     const markets = [
         {
             src: "/svg/Bourse.svg",
-            title: "بورس"
+            title: "بورس" , 
+            href : "/Bourse"
         },
         {
             src: "/svg/tala.svg",
-            title: "طلا"
+            title: "طلا" , 
+            href : "/Gold"
         },
         {
             src: "/svg/bitcoin.svg",
-            title: "کریپتو"
+            title: "کریپتو" , 
+            href : "/"
         },
         {
             src: "/svg/car.svg",
-            title: "خودرو"
+            title: "خودرو" , 
+            href : "/"
         },
         {
             src: "/svg/Forex.svg",
-            title: "فارکس"
+            title: "فارکس" , 
+            href : "/"
         },
         {
             src: "/svg/dollar.svg",
-            title: "بازار ارز"
+            title: "بازار ارز" , 
+            href : "/"
         },
     ]
 
@@ -37,10 +44,10 @@ const UserMarkets = () => {
                 <div className='container-of-market-show-div'>
                     {markets.map((market, index) => {
                         return (
-                            <div key={index} className='markets-div'>
+                            <Link to={market.href} key={index} className='markets-div'>
                                 <img src={market.src} alt="" />
                                 <strong>{market.title}</strong>
-                            </div>
+                            </Link>
                         )
                     })}
                 </div>

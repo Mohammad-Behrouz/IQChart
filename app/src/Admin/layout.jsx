@@ -10,7 +10,7 @@ function layout({ children }) {
     return (
         <>
             <Nav />
-            <nav className={`admin-panel-nav ${isOpen ? 'open-nav' : ''}`}>
+            <nav className={`admin-panel-nav ${isOpen ? 'open-nav' : ''}`} style={{zIndex : "2"}}>
                 <button
                     className={`hamburger ${isOpen ? 'open' : ''}`}
                     onClick={() => setIsOpen(!isOpen)}

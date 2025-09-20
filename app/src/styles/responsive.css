@@ -4,11 +4,132 @@
         display: flex;
         height: 75px;
         justify-content: center;
+        position: fixed;
+        /* width: 90%; */
+        /* left: 5%; */
+        /* top: 8px; */
+        width: 100%;
+        box-shadow: 0 0 10px;
+        border-radius: 0 0 10px 10px;
     }
 
+    .header .mobile-design {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .hamburger-btn {
+        z-index: 1001 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .overlay-for-menu-moblie{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 500;
+    }
+
+    .line {
+        height: 3px;
+        width: 100%;
+        background-color: #000f51;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .search-button-for-mibile {
+        background-color: #fff;
+        width: 30px;
+        height: 25px;
+        padding: 5px;
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .search-button-for-mibile i {
+        color: #000f51;
+        font-size: 20px;
+    }
+
+
+    /* انیمیشن خطوط برای تبدیل به × */
+    .line1-active {
+        transform: translateX(8px) rotate(45deg) translateY(13px);
+    }
+
+    .line2-active {
+        opacity: 0;
+    }
+
+    .line3-active {
+        transform: translateX(7px) rotate(-45deg) translateY(-11px);
+    }
+
+    /* پنل منو */
+    .side-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* بیرون صفحه */
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 501  ;
+        padding-top: 60px;
+        /* فاصله از بالا برای همبرگر */
+    }
+
+    .side-menu-open {
+        right: 0;
+        /* وارد صفحه می‌شود */
+    }
+
+    .side-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .side-menu li {
+        padding: 16px 24px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .side-menu li:hover {
+        background-color: #f0f0f0;
+    }
+
+/* 
     .header ul {
         display: none !important;
-    }
+    } */
 
     .hamburger {
         display: none;
@@ -16,7 +137,8 @@
 
     #logo-and-ul-nav {
         margin: 0;
-        width: auto
+        width: auto;
+        display: none;
     }
 
     #account-and-search-nav {
@@ -31,6 +153,7 @@
         bottom: 3%;
         width: 90%;
         height: 80px;
+        z-index: 1000;
         border-radius: 10px;
         display: flex;
         justify-content: center;

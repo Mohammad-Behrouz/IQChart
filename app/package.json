@@ -14,14 +14,17 @@
     "alertify": "^0.3.0",
     "alertifyjs": "^1.14.0",
     "bootstrap": "^5.3.7",
-    "framer-motion": "^12.19.1",
+    "framer-motion": "^12.23.13",
+    "jalaali-js": "^1.2.8",
     "jwt-decode": "^4.0.0",
+    "lightweight-charts": "^5.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-loading-skeleton": "^3.5.0",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.6.2",
     "react-scripts": "5.0.1",
+    "react-select": "^5.10.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

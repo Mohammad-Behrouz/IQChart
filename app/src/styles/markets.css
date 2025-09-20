@@ -1,0 +1,248 @@
+.container-of-Bourse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.first-chart-Bourse {
+    width: 90%;
+}
+
+.search-box-for-assets-div {
+    direction: rtl;
+    width: 90%;
+}
+
+.chart-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* box-shadow: 0 0; */
+}
+
+.chart-buttons button {
+    border: none;
+    /* background-color: #fff; */
+    /* color: #000f51; */
+    padding: 10px;
+    transition: all 0.3s ease-out;
+    border-radius: 10px 10px 0 0;
+}
+
+.chart-buttons button.active {
+    /* box-shadow: 0 0 10px;  */
+    background-color: #000f51;
+    color: #fff;
+}
+
+.chart-container {
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px;
+    overflow: hidden;
+}
+
+
+.bourse-talar-table {
+    width: 30%;
+    direction: rtl;
+    height: 210px;
+    /* box-shadow: 0 0 10px gray; */
+    background-color: #fff;
+    /* border-radius: 10px; */
+    overflow: hidden;
+}
+
+.bourse-index-title {
+    width: 42%;
+
+}
+
+.bourse-index-thead {
+    width: 90%;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    direction: rtl;
+    padding: 10px;
+    margin: 10px 20px;
+    background-color: #000f51;
+    color: white;
+    border-radius: 5px;
+    font-family: "IranSans";
+    font-size: 14px;
+}
+
+.index-bourse-thead {
+    display: flex;
+    justify-content: space-around;
+    direction: rtl;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    background-color: #000f51;
+    color: white;
+    border-radius: 5px;
+    font-family: "IranSans";
+    font-size: 15px;
+}
+
+.indexes-table {
+    font-size: 13px;
+    font-family: "IranSans";
+    margin: 0 30px 0 0;
+}
+
+.indexes-table tr td {
+
+    padding: 7px;
+    border-bottom: 1px solid rgba(83, 83, 83, 0.259);
+}
+
+.bourse-index-change {
+    direction: ltr;
+    width: 40%;
+    text-align: center;
+    font-family: "IranSans";
+}
+
+.bourse-index-value {
+    width: 20%;
+}
+
+.Effectives-table tr td {
+    padding: 7px 19px;
+}
+
+.Effectives-table tr td a {
+    transition: all 0.5s linear;
+}
+
+.Effectives-table tr td a:hover {
+    color: #000F51;
+}
+
+.effective-container {
+    width: 90%;
+    direction: rtl;
+    background-color: #fff;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+
+}
+
+#codal-container {
+
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+}
+.codal-Bourse-item{
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    height: 190px;
+    direction: rtl;
+    padding-right: 10px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+#cofal-Bourse-item-first-div{
+    /* width: 100%; */
+    display: flex;
+
+}
+.codal-Bourse-item p {
+    padding: none;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 0px px;
+}
+
+
+@media (max-width: 599px) {
+    #codal-container {
+        grid-template-columns: 1fr;
+    }
+
+    .show-pos-neg-num {
+        width: 90%;
+        background-color: white;
+        box-shadow: 0 0 10px;
+        border-radius: 10px;
+    }
+
+    .bourse-talar-table {
+        width: 100%;
+    }
+
+    .chart-buttons {
+        width: 100%;
+    }
+
+    #show-pos-neg-num-bazar-status {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #show-pos-neg-num-bazar-status span {
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+    }
+
+    #container-of-pos-neg-row {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pos-neg-row {
+        display: flex;
+        width: 90%;
+        height: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #pos-row {
+        background-color: #16a34a;
+    }
+
+    #neg-row {
+        background-color: #ef4444;
+    }
+
+    .mobile-nazer-codal-div {
+        width: 90%;
+        height: 76px;
+        display: grid;
+        gap: 10px;
+        color: white;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .button-nazer-codal {
+        background-color: #000F51;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px gray;
+    }
+
+}
