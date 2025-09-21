@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/admin.css";
 
-function AdminMenu() {
+function    AdminMenu() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (

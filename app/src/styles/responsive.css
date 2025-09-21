@@ -43,7 +43,8 @@
         padding: 5px;
         border-radius: 5px;
     }
-    .overlay-for-menu-moblie{
+
+    .overlay-for-menu-moblie {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -94,13 +95,13 @@
         position: fixed;
         top: 0;
         right: -250px;
-        /* بیرون صفحه */
+
         width: 250px;
         height: 100vh;
         background-color: white;
         box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease;
-        z-index: 501  ;
+        z-index: 501;
         padding-top: 60px;
         /* فاصله از بالا برای همبرگر */
     }
@@ -126,7 +127,7 @@
         background-color: #f0f0f0;
     }
 
-/* 
+    /* 
     .header ul {
         display: none !important;
     } */
@@ -276,6 +277,7 @@
     #admin-user-section-1-div div {
         width: 97%;
     }
+
 }
 
 /* 📲 تبلت کوچک: ۶۰۰ تا ۷۶۷px */

@@ -26,7 +26,7 @@ const Gold = () => {
     const mostViewSlug = ["TALA_18", "SEKE_BAHAR", "SEKE_EMAMI", "SEKE_NIM"]
 
     const OnsTable = ["ONS", "ONSNOGHRE", "ONSPALA", "PALA"]
-    const talaha = ["TALA_MESGHAL", "TALA_18","OIL", "TALA_24" ]
+    const talaha = ["TALA_MESGHAL", "TALA_18", "OIL", "TALA_24"]
     const sekeha = ["SEKE_EMAMI", "SEKE_BAHAR", "SEKE_NIM", "SEKE_ROB", "SEKE_GERAMI"]
 
     useEffect(() => {
@@ -187,7 +187,7 @@ const Gold = () => {
                     <table id='ons-table' className='seke-table'>
                         <thead>
                             <tr>
-                                <th style={{width : "120px"}} >سکه</th>
+                                <th id='seke-column' >سکه</th>
                                 <th>قیمت</th>
                                 <th >درصد</th>
                                 <th >تغییرات</th>
@@ -239,96 +239,103 @@ const Gold = () => {
                 </div>
                 <div className='gold-container-div'>
                     <div className='tala-ons-div'>
-                        <table id='ons-table' className='ons-table'>
-                            <thead>
-                                <tr>
-                                    <th>انس</th>
-                                    <th>قیمت</th>
-                                    <th>تغییرات</th>
-                                    <th>درصد</th>
-                                    <th>بیشترین</th>
-                                    <th>کمترین</th>
-                                    <th>آخرین آپدیت</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {isLoading ? OnsTable.map((x, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                        </tr>
-                                    )
-                                }) : ons.map((o, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <td>{o.name}</td>
-                                            <td>{o.price}</td>
-                                            <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray", direction: "ltr" }}>{o.change_percent}%</td>
-                                            <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray" }}>{parseInt(o.change).toLocaleString("fa")}</td>
-                                            <td>{o.max_price}</td>
-                                            <td>{o.min_price}</td>
-                                            <td>{o.last_update}</td>
-                                        </tr>
-                                    )
-                                })
+                        <div className="table-container " style={{width : "100%" }}>
 
-                                }
+                            <table id='ons-table' className='ons-table'>
+                                <thead>
+                                    <tr>
+                                        <th id='seke-column'>انس</th>
+                                        <th>قیمت</th>
+                                        <th>تغییرات</th>
+                                        <th>درصد</th>
+                                        <th>بیشترین</th>
+                                        <th>کمترین</th>
+                                        <th>آخرین آپدیت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {isLoading ? OnsTable.map((x, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                            </tr>
+                                        )
+                                    }) : ons.map((o, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{o.name}</td>
+                                                <td>{o.price}</td>
+                                                <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray", direction: "ltr" }}>{o.change_percent}%</td>
+                                                <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray" }}>{parseInt(o.change).toLocaleString("fa")}</td>
+                                                <td>{o.max_price}</td>
+                                                <td>{o.min_price}</td>
+                                                <td>{o.last_update}</td>
+                                            </tr>
+                                        )
+                                    })
 
-                            </tbody>
-                        </table>
-                        <table id='ons-table' className='ons-table'>
-                            <thead>
-                                <tr>
-                                    <th>طلا و نفت</th>
-                                    <th>قیمت</th>
-                                    <th>تغییرات</th>
-                                    <th>درصد</th>
-                                    <th>بیشترین</th>
-                                    <th>کمترین</th>
-                                    <th>آخرین آپدیت</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {isLoading ? OnsTable.map((x, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                            <td><Skeleton width={50} height={20} /></td>
-                                        </tr>
-                                    )
-                                }) : tala   .map((o, index) => {
-                                    return (
-                                        <tr key={index}>
-                                            <td>{o.name}</td>
-                                            <td>{o.price}</td>
-                                            <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray", direction: "ltr" }}>{o.change_percent}%</td>
-                                            <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray" }}>{parseInt(o.change).toLocaleString("fa")}</td>
-                                            <td>{o.max_price}</td>
-                                            <td>{o.min_price}</td>
-                                            <td>{o.last_update}</td>
-                                        </tr>
-                                    )
-                                })
+                                    }
 
-                                }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className='table-container' style={{width : "100%" }}>
 
-                            </tbody>
-                        </table>
+                            <table id='ons-table'  className='ons-table'>
+                                <thead>
+                                    <tr>
+                                        <th id='seke-column'>طلا</th>
+                                        <th>قیمت</th>
+                                        <th>تغییرات</th>
+                                        <th>درصد</th>
+                                        <th>بیشترین</th>
+                                        <th>کمترین</th>
+                                        <th>آخرین آپدیت</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {isLoading ? OnsTable.map((x, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                                <td><Skeleton width={50} height={20} /></td>
+                                            </tr>
+                                        )
+                                    }) : tala.map((o, index) => {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{o.name}</td>
+                                                <td>{o.price}</td>
+                                                <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray", direction: "ltr" }}>{o.change_percent}%</td>
+                                                <td style={{ color: parseFloat(o.change_percent) > 0 ? "green" : parseFloat(o.change_percent) < 0 ? "red" : "gray" }}>{parseInt(o.change).toLocaleString("fa")}</td>
+                                                <td>{o.max_price}</td>
+                                                <td>{o.min_price}</td>
+                                                <td>{o.last_update}</td>
+                                            </tr>
+                                        )
+                                    })
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
             </section>
+            <br /><br /><br /><br />
         </>
     )
 }

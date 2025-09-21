@@ -25,6 +25,7 @@ const LineChartForIndexBourse = ({ data }) => {
         background: { type: 'solid', color: '#ffffff' },
         textColor: '#000000',
         fontFamily: 'IranSans',
+        
       },
       grid: {
         vertLines: { visible: false },
@@ -45,6 +46,7 @@ const LineChartForIndexBourse = ({ data }) => {
       lineWidth: 2,
       topColor: 'rgba(0, 15, 81, 0.4)',
       bottomColor: 'rgba(0, 15, 81, 0)',
+      
     });
 
     // Tooltip
@@ -58,7 +60,7 @@ const LineChartForIndexBourse = ({ data }) => {
       border-radius: 4px;
       font-size: 12px;
       pointer-events: none;
-      direction: rtl;
+      direction: ltr;
       font-family: IranSans;
       z-index: 10;
     `;

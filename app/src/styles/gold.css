@@ -98,6 +98,7 @@ table {
 
 .tala-ons-div {
     width: 100%;
+    direction: rtl;
     /* overflow-x: auto; */
     display: flex;
 
@@ -126,6 +127,7 @@ table {
 .ons-table td {
     text-align: center;
     font-size: 15px;
+    padding: 7px 15px;
     font-family: "IranSans" !important;
 }
 
@@ -146,7 +148,7 @@ table {
 
 
 #ons-table thead {
-    background-color: #260599;
+    background-color: #000f51;
     color: white;
     gap: 10px;
     padding: 30px 10px;
@@ -190,12 +192,15 @@ table {
         height: 350px;
         background-color: #000f51;
     }
-    .gold-container{
+
+    .gold-container {
         margin-top: 0;
     }
-    .table-container{
+
+    .table-container {
         width: 90%;
     }
+
     #gold-title {
         margin: 0;
         text-align: center;
@@ -203,24 +208,52 @@ table {
         position: inherit;
 
     }
+
     .most-view-gold {
         position: absolute;
         display: grid;
         place-items: center;
-        bottom: 35px;
-        gap:5px;
+        bottom: 0;
+        gap: 5px;
         grid-template-columns: 1fr 1fr;
     }
-    .most-view-gold div{
+
+    .most-view-gold div {
         width: 84%;
         scale: 0.95;
     }
-    .most-view-gold div h4{
-        font-size: 14px;
-    }
-       .most-view-gold div b{
+
+    .most-view-gold div h4 {
         font-size: 14px;
     }
 
+    .most-view-gold div b {
+        font-size: 14px;
+    }
+
+    .seke-table td,
+    .seke-table th {
+        padding: 5px 10px;
+    }
+
+    .table-container {
+        direction: rtl;
+    }
+
+    #seke-column {
+        padding: 10px 42px;
+    }
+
+    .tala-ons-div {
+        flex-direction: column;
+    }
+
+    .tala-ons-div table {
+        width: 100%;
+    }
+
+    .gold-container-div {
+        width: 90%;
+    }
 
 }

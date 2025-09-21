@@ -18,6 +18,7 @@ import Bourse from './User/Markets/Bourse/Bourse';
 import Nazer from './User/Markets/Bourse/Nazer';
 import Codal from './User/Markets/Bourse/Codal';
 import Gold from './User/Markets/Gold/Gold';
+import "./styles/responsive.css"
 
 const PageWrapper = ({ children, pathnameKey }) => (
   <motion.div
@@ -44,6 +45,7 @@ function AnimatedRoutes() {
         <Route element={<UserPanel />} >
           <Route path="/Bourse" element={<PageWrapper pathnameKey={location.pathname}><Bourse /></PageWrapper>} />
           <Route path="/Gold" element={<PageWrapper pathnameKey={location.pathname}><Gold /></PageWrapper>} />
+          <Route path="/Crypto" element={<PageWrapper pathnameKey={location.pathname}><Gold /></PageWrapper>} />
           <Route path="/Bourse/Codal" element={<PageWrapper pathnameKey={location.pathname}><Codal /></PageWrapper>} />
           <Route path="/Bourse/Nazer" element={<PageWrapper pathnameKey={location.pathname}><Nazer /></PageWrapper>} />
           <Route path="/users/plans" element={<PageWrapper pathnameKey={location.pathname}><UserPlans /></PageWrapper>} />

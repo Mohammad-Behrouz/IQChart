@@ -9,22 +9,25 @@ const UserMarkets = () => {
         {
             src: "/svg/Bourse.svg",
             title: "بورس" , 
-            href : "/Bourse"
+            href : "/Bourse" ,
+            style : {scale : "1.65"}
         },
         {
             src: "/svg/tala.svg",
             title: "طلا" , 
-            href : "/Gold"
+            href : "/Gold" , 
+            style : {scale  : "1.5"}
         },
         {
             src: "/svg/bitcoin.svg",
             title: "کریپتو" , 
-            href : "/"
+            href : "/Crypto"
         },
         {
             src: "/svg/car.svg",
             title: "خودرو" , 
-            href : "/"
+            href : "/" , 
+            style : {scale : 0.9}
         },
         {
             src: "/svg/Forex.svg",
@@ -34,18 +37,19 @@ const UserMarkets = () => {
         {
             src: "/svg/dollar.svg",
             title: "بازار ارز" , 
-            href : "/"
+            href : "/" , 
+            style : {scale : 0.9}
         },
     ]
 
     return (
         <>
             <div className='container-of-market-show'>
-                <div className='container-of-market-show-div'>
+                <div  className='container-of-market-show-div'>
                     {markets.map((market, index) => {
                         return (
                             <Link to={market.href} key={index} className='markets-div'>
-                                <img src={market.src} alt="" />
+                                <img style={market.style} src={market.src} alt="" />
                                 <strong>{market.title}</strong>
                             </Link>
                         )

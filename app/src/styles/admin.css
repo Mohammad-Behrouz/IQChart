@@ -53,6 +53,7 @@ body {
     overflow: hidden;
     background-color: #fff;
     align-items: center;
+    z-index: 400;
 }
 
 /* .nav-container {

@@ -219,3 +219,23 @@ textarea.common-input {
 .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.tv-lightweight-charts table {
+  direction: ltr;
+}
+
+.side-menu {
+  display: none;
+}
+
+#logo-and-ul-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+@media (max-width: 599px) {
+  .side-menu {
+    display: block;
+  }
+}
