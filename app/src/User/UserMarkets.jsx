@@ -26,7 +26,7 @@ const UserMarkets = () => {
         {
             src: "/svg/car.svg",
             title: "خودرو" , 
-            href : "/" , 
+            href : "/Car" , 
             style : {scale : 0.9}
         },
         {
@@ -37,7 +37,7 @@ const UserMarkets = () => {
         {
             src: "/svg/dollar.svg",
             title: "بازار ارز" , 
-            href : "/" , 
+            href : "/Arz" , 
             style : {scale : 0.9}
         },
     ]

@@ -238,4 +238,7 @@ textarea.common-input {
   .side-menu {
     display: block;
   }
+  .img-coin-icon{
+    width: 20px;
+  }
 }
