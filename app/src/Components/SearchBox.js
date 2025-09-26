@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-const SearchBox = () => {
+const SearchBox = ({onClick}) => {
   return (
     <>
-        <div id='search-box'>
+        <div onClick={onClick} id='search-box'>
 
             <input type='text' suppressHydrationWarning={true} placeholder="... جستجوی نماد"/>
             <button suppressHydrationWarning={true}><i className="fa-solid fa-magnifying-glass"></i></button>

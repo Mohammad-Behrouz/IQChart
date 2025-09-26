@@ -15,6 +15,11 @@
 .search-box-for-assets-div {
     direction: rtl;
     width: 90%;
+    position: sticky;
+    /* top: 20px; */
+    /* فاصله از بالا */
+    /* background: lightblue; */
+    padding: 10px;
 }
 
 .chart-buttons {
@@ -139,7 +144,8 @@
     gap: 10px;
     place-items: center;
 }
-.codal-Bourse-item{
+
+.codal-Bourse-item {
     width: 90%;
     background-color: #fff;
     box-shadow: 0 0 10px;
@@ -152,11 +158,13 @@
     justify-content: center;
     flex-direction: column;
 }
-#cofal-Bourse-item-first-div{
+
+#cofal-Bourse-item-first-div {
     /* width: 100%; */
     display: flex;
 
 }
+
 .codal-Bourse-item p {
     padding: none;
     font-size: 14px;

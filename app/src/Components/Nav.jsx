@@ -2,34 +2,23 @@
 
 import React, { useEffect, useState } from 'react'
 import SearchBox from './SearchBox';
-import { Link } from 'react-router-dom'
+import { Link, Links } from 'react-router-dom'
+import Modal from 'react-modal';
+import Select from "react-select";
+import { api_token_sourceArena } from '../javaScript/api_sourceArena';
+import SearchModal from './SearchModal';
+
+Modal.setAppElement('#root');
 
 export const Nav = () => {
   const [loggedIn, setLoggedIn] = useState("حساب کاربری")
   const [isOpen, setIsOpen] = useState(false);
+
+  const [SearchOpen, setSearchOpen] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleSearch = () => setSearchOpen(!SearchOpen)
 
-  // useEffect(()=>{
-  //   const fetchLogin = async ()=>{
-  //     var res = await fetch("https://localhost:7282/api/Login" ,{
-  //       method : "get",
-  //        credentials: "include"
-  //     })
-  //     var json =  await res.json()
-  //     console.log(json.message);
-
-
-  //     if(json.loggedIn == "y"){
-  //       setLoggedIn(json.name.toString())
-  //     }else if(json.loggedIn == "n"){
-  //       setLoggedIn("حساب کاربری")
-  //     }
-
-
-  //   }
-
-  //   fetchLogin()
-  // },[])
 
   return (
     <>
@@ -44,8 +33,8 @@ export const Nav = () => {
 
           <img className='logo' src="/Images/IQChart_logo_rtl_white.png" alt="" />
 
-          <Link className='search-button-for-mibile'>
-            <i className='fa-solid fa-magnifying-glass'></i>
+          <Link className='search-button-for-mibile' onClick={toggleSearch}>
+            <i className={!SearchOpen ? 'fa-solid fa-magnifying-glass' : "fa-solid fa-xmark"} style={{ fontSize: SearchOpen ? "34px" : "" }}></i>
           </Link>
 
         </div>
@@ -73,7 +62,7 @@ export const Nav = () => {
 
         <div id='account-and-search-nav'>
           <Link href="Plan"><i className="fa-solid fa-star"></i>&nbsp; اشتراک</Link>
-          <SearchBox />
+          <SearchBox onClick={toggleSearch} />
           <Link href="login"><i className="fa-solid fa-user"></i>&nbsp;{loggedIn}</Link>
         </div>
 
@@ -87,10 +76,14 @@ export const Nav = () => {
           <li>تماس با ما</li>
         </ul>
       </div>
-      <div onClick={toggleMenu} style={{display : isOpen?"block" : "none"}} className='overlay-for-menu-moblie' ></div>
+      <div onClick={toggleMenu} style={{ display: isOpen ? "block" : "none" }} className='overlay-for-menu-moblie' ></div>
 
 
       <div id='margin-div-for-nav' ></div>
+
+
+      <SearchModal SearchOpen={SearchOpen} setSearchOpen={setSearchOpen}/>
+
     </>
   )
 }

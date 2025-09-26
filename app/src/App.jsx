@@ -46,6 +46,7 @@ function AnimatedRoutes() {
 
         <Route element={<UserPanel />} >
           <Route path="/Bourse" element={<PageWrapper pathnameKey={location.pathname}><Bourse /></PageWrapper>} />
+          <Route path="/Bourse/:id" element={<PageWrapper pathnameKey={location.pathname}><Bourse /></PageWrapper>} />
           <Route path="/Gold" element={<PageWrapper pathnameKey={location.pathname}><Gold /></PageWrapper>} />
           <Route path="/Crypto" element={<PageWrapper pathnameKey={location.pathname}><Crypto /></PageWrapper>} />
           <Route path="/Car" element={<PageWrapper pathnameKey={location.pathname}><Car /></PageWrapper>} />
